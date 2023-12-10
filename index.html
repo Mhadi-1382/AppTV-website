@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="The best movies and TV shows always available to you with AppTV.">
+        <meta name="keywords" content="AppTV">
+        <meta name="theme-color" content="#000">
+
+        <!-- IMPORT CSS MAIN -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!-- IMPORT FONT AWESOME -->
+        <link rel="stylesheet" type="text/css" href="fonts/css/fontawesome.min.css">
+        <link rel="stylesheet" type="text/css" href="fonts/css/all.min.css">
+
+        <!-- IMPORT FAVICON -->
+        <link rel="shortcut icon" href="images/logo/SVG/AppTV_Logo.svg" type="image/x-icon">
+        
+        <!-- TITLE -->
+        <title>AppTV</title>
+    </head>
+    <body>
+
+        <!-- LOADER -->
+        <div class="loader-warpper" id="loader">
+            <img src="images\logo\SVG\AppTV_Logo_W.svg" alt=""  draggable="false" class="loader">
+            <div class="loader-progress">
+                <div class="loader-progress-line"></div>
+            </div>
+        </div>
+
+
+        <!-- NAVBAR -->
+        <nav>
+            <!-- IMAGE & INFO AVATAR -->
+            <ul>
+                <!-- ICON MENUBAR -->
+                <a href="javascript:menubar()" class="icon-menubar" accesskey="0"><li class="far fa-bars"></li></a>
+
+                <a href="javascript:dropdownAvatar()"><img src="images/avatar/avatar.png" alt=""></a>
+                <div>
+                    <p>Mahdi</p>
+                    <a href="https://dribbble.com/Mahdi_Rabiee">@Mahdi_Rabiee</a>
+                </div>
+            </ul>
+            <!-- NAV ITEM/MENU -->
+            <ul id="menubar">
+                <a href="#my-space" class="active-nav-item"><li>My Space</li></a>
+                <a href="#radio"><li>Radio</li></a>
+                <a href="#community"><li>Community</li></a>
+                <a href="#store"><li>Store</li></a>
+
+                <!-- ICON CLOSE MENUBAR -->
+                <a href="javascript:menubar()" class="icon-menubar-close"><li class="far fa-close"></li></a>
+            </ul>
+            <!-- SET TIME & WEATHER -->
+            <ul>
+                <div>
+                    <img src="images/sun-cloud.png" alt="">
+                    <p>18ºC <span>Partly Cloudy</span></p>
+                </div>
+                <h4 id="setTime"></h4>
+            </ul>
+        </nav>
+        <!-- AVATAR DROPDOWN -->
+        <div class="avatar-dropdown" id="dropdownAvatar">
+            <a href="javascript:toggleOnOff()"><li><span class="far fa-bell"></span> Notifications</li> <span class="far fa-toggle-on" id="toggleOn"></span> <span class="far fa-toggle-off" id="toggleOff"></span></a>
+            <a href=""><li><span class="far fa-info-circle"></span> Guide</li></a>
+            <hr>
+            <a href=""><li><span class="far fa-sign-out"></span> Logout</li></a>
+        </div>
+
+
+        <!-- MAIN -->
+        <main>
+            <!-- SLIDE: MY SPACE -->
+            <section class="my-space" id="my-space">
+                <!-- MY SPACE: BODY -->
+                <div class="my-space-body">
+                    <a href="javascript:playerVideo()"><img src="images/covers/01/The-Last-of-Us-Part-II-cover.jpg" alt="" draggable="false" id="imageTarget1"></a>
+                    <a href="javascript:playerVideo()"><img src="images/covers/02/81+ibYQ-VTL._AC_UF1000,1000_QL80_.jpg" alt="" draggable="false" id="imageTarget2"></a>
+                    <a href="javascript:playerVideo()"><img src="images/covers/03/194232_1353163.jpeg" alt="" draggable="false" id="imageTarget3"></a>
+                    <a href="javascript:playerVideo()"><img src="images/covers/04/81CLFQwU-WL.jpg" alt="" draggable="false" id="imageTarget4"></a>
+                    <a href="javascript:playerVideo()"><img src="images/covers/05/71KPOvu-hOL._AC_UF894,1000_QL80_.jpg" alt="" draggable="false" id="imageTarget5"></a>
+                    <a href="javascript:playerVideo()"><img src="images/covers/06/Sherlock-(2010).jpg" alt="" draggable="false" id="imageTarget6"></a>
+                    <a href="javascript:playerVideo()"><img src="images/covers/07/mov_13090_1-b.jpg" alt="" draggable="false" id="imageTarget7"></a>
+                    <a href="javascript:playerVideo()"><img src="images/covers/08/ab67616d0000b27315ac95e8ae66385321d8335f.jfif" alt="" draggable="false" id="imageTarget8"></a>
+                </div>
+                <!-- MY SPACE: FOOTER -->
+                <div class="my-space-footer">
+                    <a href="#radio"><li class="far fa-angle-down"></li> <span>Radio</span></a>
+                    <div>
+                        <a href="javascript:void(0)"><button class="button-circle button-circle-select">A</button> <span>Select</span></a>
+                        <a href="javascript:void(0)"><button class="button-circle button-circle-play">X</button> <span>Play</span></a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- PLAYER VIDEO -->
+        <div class="overlay-player-video" id="playerVideo">
+            <div class="player-video" id="playerVideoMain">
+                <div class="player-video-header" id="playerControl1">
+                    <div>
+                        <h4><a href="javascript:playerVideo()"><span class="far fa-angle-left"></span></a> The Last Of Us Part II</h4>
+                    </div>
+                    <div>
+                        <div class="weather">
+                            <img src="images/sun-cloud.png" alt="">
+                            <p>18ºC</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="player-video-body">
+                    <a href="javascript:playerControl()">
+                        <video src="videos/pexels-yaroslav-shuraev-5418124.mp4" autoplay id="video"></video>
+                    </a>
+                </div>
+                <div class="player-video-footer" id="playerControl2">
+                    <div>
+                        <p>00:10:32</p>
+                    </div>
+                    <div>
+                        <a href="javascript:void(0)"><li class="far fa-step-backward"></li></a>
+                        <a href="javascript:pauseVideo()" id="btnPause"><li class="far fa-pause"></li></a>
+                        <a href="javascript:playVideo()" id="btnPlay"><li class="far fa-play"></li></a>
+                        <a href="javascript:void(0)"><li class="far fa-step-forward"></li></a>
+                    </div>
+                    <div>
+                        <a href="javascript:void(0)"><li class="far fa-volume-up"></li></a>
+                        <a href="javascript:void(0)"><li class="far fa-cog"></li></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- IMPORT JS -->
+        <script src="js/app.js"></script>
+    
+    </body>
+</html>
